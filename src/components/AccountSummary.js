@@ -7,16 +7,16 @@ export const AccountSummary = () => {
 
     const { transactions } = useContext(GlobalContext);
 
-    const transactionAmounts = transactions.map(transaction => transaction.transactionAmount);
+    const transactionAmounts = transactions.map(transactions => transactions.transactionAmount);
 
     const income = transactionAmounts
-        .filter(transaction => transaction > 0)
-        .reduce((acc, transaction) => (acc += transaction), 0)
+        .filter(transactions => transactions > 0)
+        .reduce((acc, transactions) => (acc += transactions), 0)
         .toFixed(2);
 
     const expense = Math.abs(transactionAmounts
-        .filter(transaction => transaction < 0)
-        .reduce((acc, transaction) => (acc += transaction), 0)
+        .filter(transactions => transactions < 0)
+        .reduce((acc, transactions) => (acc += transactions), 0)
         ).toFixed(2);
 
     return (
