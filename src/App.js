@@ -3,7 +3,7 @@ import './App.css';
 
 
 //Import Global Provider
-import {GlobalProvider} from './context/GlobalState';
+// import {GlobalProvider} from './context/GlobalState';
 
 //Import Components
 import {Header} from './components/Header'
@@ -16,7 +16,7 @@ import{AddTransaction} from './components/AddTransaction'
 
 function App() {
   return (
-      <GlobalProvider>
+      // <GlobalProvider>
       <Header/>,
       <div className="container">
       <Balance/>
@@ -24,7 +24,7 @@ function App() {
       <TransactionHistory/>
       <AddTransaction/>
       </div>
-   </GlobalProvider>
+  //  </GlobalProvider>
 
   );
 }
