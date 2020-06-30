@@ -45,3 +45,4 @@ export const GlobalProvider = ({ children }) => {
         </GlobalProvider.Provider>
     )
 }
+export default GlobalProvider;
